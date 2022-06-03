@@ -1,4 +1,7 @@
-const HeroesListItem = ({name, description, element}) => {
+import React from 'react';
+
+
+const HeroesListItem = ({onDelete, name, description, element }) => {
   let elementClassName;
 
   switch (element) {
@@ -8,7 +11,7 @@ const HeroesListItem = ({name, description, element}) => {
     case 'earth': elementClassName = 'bg-secondary bg-gradient'; break;
     default: elementClassName = 'bg-warning bg-gradient';
   };
-  
+
 
   return (
     <li
@@ -24,7 +27,9 @@ const HeroesListItem = ({name, description, element}) => {
         <p className="card-text">{description}</p>
       </div>
 
-      <span className="position-absolute top-0 start-100 translate-middle badge border rounded-pill bg-light">
+      <span
+        className="position-absolute top-0 start-100 translate-middle badge border rounded-pill bg-light"
+        onClick={ onDelete }>
         <button type="button" className="btn-close btn-close" aria-label="Close"></button>
       </span>
     </li>
