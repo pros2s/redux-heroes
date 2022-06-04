@@ -30,3 +30,29 @@ export const heroCreated = (hero) => {
         payload: hero
     }
 };
+
+export const fetchingFilters = () => {
+    return {
+        type: 'FILTERS_FETCHING'
+    }
+};
+
+export const fetchedFilters = (filters) => {
+    return {
+        type: 'FILTERS_FETCHED',
+        payload: filters
+    }
+};
+
+export const fetchingErrorFilters = () => {
+    return {
+        type: 'FILTERS_FETCHING_ERROR'
+    }
+};
+
+export const filterCharacters = (name) => {
+    return {
+        type: 'FILTER_CHARACTERS',
+        payload: name
+    }
+};
