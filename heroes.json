@@ -1,5 +1,18 @@
 {
-  "heroes": [],
+  "heroes": [
+    {
+      "id": "89a02197-565c-438d-ab47-a452a0d71bd4",
+      "name": "iron man",
+      "description": "flying",
+      "element": "wind"
+    },
+    {
+      "id": "14534ef5-c8cd-40bf-8382-c9128ac3529d",
+      "name": "girl",
+      "description": "smth",
+      "element": "water"
+    }
+  ],
   "filters": [
     "all",
     "fire",
