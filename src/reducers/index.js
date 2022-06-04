@@ -24,7 +24,7 @@ const reducer = (state = initialState, action) => {
                           ?
                         action.payload
                           :
-                        action.payload.filter((hero) => hero.element !== state.activeFilter)
+                        action.payload.filter((hero) => hero.element === state.activeFilter)
       }
     case 'HEROES_FETCHING_ERROR':
       return {

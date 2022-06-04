@@ -9,7 +9,7 @@
 // данных из фильтров
 
 import { useState } from "react";
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 
 import { heroCreated } from "../../actions";
@@ -17,6 +17,8 @@ import { useHttp } from '../../hooks/http.hook';
 
 
 const HeroesAddForm = () => {
+  const { filters, filtersLoadingStatus } = useSelector((state) => state);
+
   const [ inputValue, setInputValue ] = useState('');
   const [ textareaValue, setTextareaValue ] = useState('');
   const [ selectedElement, setSelectedElement ] = useState('');
@@ -42,6 +44,18 @@ const HeroesAddForm = () => {
     setInputValue('');
     setTextareaValue('');
     setSelectedElement('');
+  };
+
+  const renderOptions = (filters, status) => {
+    if (status === 'loading') return <option>Загрузка...</option>;
+    if (status === 'error') return <option>Ошибка</option>;
+
+    if (filters && filters.length > 0) {
+      return filters.map(({ name, output }) => {
+        if (name === 'all') return; //eslint-disable-line
+        return <option value={ name }>{ output }</option>
+      });
+    };
   };
 
 
@@ -84,11 +98,8 @@ const HeroesAddForm = () => {
             className="form-select"
             id="element"
             name="element">
-              <option >Я владею элементом...</option>
-              <option value="fire">Огонь</option>
-              <option value="water">Вода</option>
-              <option value="wind">Ветер</option>
-              <option value="earth">Земля</option>
+              <option value=''>Я владею элементом...</option>
+              { renderOptions(filters, filtersLoadingStatus) }
           </select>
         </div>
 
