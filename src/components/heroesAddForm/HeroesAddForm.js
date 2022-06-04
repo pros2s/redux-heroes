@@ -53,7 +53,7 @@ const HeroesAddForm = () => {
     if (filters && filters.length > 0) {
       return filters.map(({ name, output }) => {
         if (name === 'all') return; //eslint-disable-line
-        return <option value={ name }>{ output }</option>
+        return <option key={ name } value={ name }>{ output }</option>
       });
     };
   };
