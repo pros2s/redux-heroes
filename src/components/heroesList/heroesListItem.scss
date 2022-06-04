@@ -1,0 +1,21 @@
+.char-enter {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.char-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 500ms;
+}
+
+.char-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.char-exit-active {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 500ms;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const HeroesListItem = ({onDelete, name, description, element }) => {
+const HeroesListItem = ({ onDelete, name, description, element }) => {
   let elementClassName;
 
   switch (element) {
