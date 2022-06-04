@@ -17,7 +17,7 @@ import { useHttp } from '../../hooks/http.hook';
 
 
 const HeroesAddForm = () => {
-  const { filters, filtersLoadingStatus } = useSelector((state) => state);
+  const { filters, filtersLoadingStatus } = useSelector((state) => state.filters);
 
   const [ inputValue, setInputValue ] = useState('');
   const [ textareaValue, setTextareaValue ] = useState('');
