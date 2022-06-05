@@ -13,28 +13,16 @@
       "element": "water"
     },
     {
-      "id": "52b2c1e6-59c6-4e8e-9640-e95fa3ea06f1",
-      "name": "adf",
-      "description": "adsf",
+      "id": "ac223998-78c2-4b5e-9c58-05e7c4b82873",
+      "name": "safd",
+      "description": "sdaf",
       "element": "fire"
     },
     {
-      "id": "7ecd3077-f76e-4041-a368-fa0702694572",
-      "name": "adfasdf",
-      "description": "sdf",
-      "element": "fire"
-    },
-    {
-      "id": "1692adb6-5805-4a2b-91c0-4339e22b4e95",
+      "id": "9daafef6-aebb-4257-a533-4910dd50563a",
       "name": "sadf",
-      "description": "fdsaf",
+      "description": "dsfaf",
       "element": "wind"
-    },
-    {
-      "id": "32ea59d9-bbf0-4480-8646-f896ae8c2e3a",
-      "name": "sadf",
-      "description": "fsadf",
-      "element": "earth"
     }
   ],
   "filters": [
