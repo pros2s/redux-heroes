@@ -7,12 +7,6 @@
       "element": "water"
     },
     {
-      "id": "9126ad4b-b403-4a2b-9673-67b8a263781b",
-      "name": "sadf",
-      "description": "asdf",
-      "element": "wind"
-    },
-    {
       "id": "077202f5-a537-48f3-bb35-b7ccadc1aba8",
       "name": "asdf",
       "description": "asdf",
@@ -29,6 +23,18 @@
       "name": "adsf",
       "description": "adf",
       "element": "earth"
+    },
+    {
+      "id": "15159d5f-9386-482b-9727-40e9ab558443",
+      "name": "фвафа",
+      "description": "фва",
+      "element": "earth"
+    },
+    {
+      "id": "c9901bf5-0a1a-4b58-8c22-81b66f29e83d",
+      "name": "ыфвафы",
+      "description": "афа",
+      "element": "wind"
     }
   ],
   "filters": [
