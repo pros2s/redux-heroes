@@ -6,14 +6,11 @@ import { createSelector } from 'reselect';
 
 import './heroesListItem.scss';
 
-import { fetchHeroes, heroDeleted } from '../../actions';
+import { fetchHeroes } from '../../actions';
+import { heroDeleted } from '../heroesList/heroesSlice';
 import HeroesListItem from '../heroesListItem/HeroesListItem';
 import Spinner from '../spinner/Spinner';
 
-// Задача для этого компонента:
-// При клике на 'крестик' идет удаление персонажа из общего состояния
-// Усложненная задача:
-// Удаление идет и с json файла при помощи метода DELETE
 
 const HeroesList = () => {
   const filteredHeroesSelector = createSelector(
