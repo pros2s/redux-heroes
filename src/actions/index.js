@@ -1,3 +1,6 @@
+import { createAction } from "@reduxjs/toolkit";
+
+
 export const fetchHeroes = (request) => (dispatch) => {
   dispatch(heroesFetching());
   request('http://localhost:3001/heroes')
@@ -12,61 +15,15 @@ export const fetchFilters = (request) => (dispatch) => {
     .catch(dispatch(fetchingErrorFilters()));
 };
 
-export const heroesFetching = () => {
-    return {
-        type: 'HEROES_FETCHING'
-    };
-};
 
-export const heroesFetched = (heroes) => {
-    return {
-        type: 'HEROES_FETCHED',
-        payload: heroes
-    };
-};
+export const heroesFetching = createAction('HEROES_FETCHING');
+export const heroesFetched = createAction('HEROES_FETCHED');
+export const heroesFetchingError = createAction('HEROES_FETCHING_ERROR');
 
-export const heroesFetchingError = () => {
-    return {
-        type: 'HEROES_FETCHING_ERROR'
-    };
-};
+export const heroDeleted = createAction('HERO_DELETED');
+export const heroCreated = createAction('HERO_CREATED');
 
-export const heroDeleted = (id) => {
-    return {
-        type: 'HERO_DELETED',
-        payload: id
-    };
-};
-
-export const heroCreated = (hero) => {
-    return {
-        type: 'HERO_CREATED',
-        payload: hero
-    };
-};
-
-export const fetchingFilters = () => {
-    return {
-        type: 'FILTERS_FETCHING'
-    };
-};
-
-export const fetchedFilters = (filters) => {
-    return {
-        type: 'FILTERS_FETCHED',
-        payload: filters
-    };
-};
-
-export const fetchingErrorFilters = () => {
-    return {
-        type: 'FILTERS_FETCHING_ERROR'
-    };
-};
-
-export const filterCharacters = (name) => {
-    return {
-        type: 'FILTER_CHARACTERS',
-        payload: name
-    };
-};
+export const fetchingFilters = createAction('FILTERS_FETCHING');
+export const fetchedFilters = createAction('FILTERS_FETCHED');
+export const fetchingErrorFilters = createAction('FILTERS_FETCHING_ERROR');
+export const filterCharacters = createAction('FILTER_CHARACTERS');
