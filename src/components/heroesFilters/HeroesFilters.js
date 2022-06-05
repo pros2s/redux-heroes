@@ -5,12 +5,12 @@
 // Изменять json-файл для удобства МОЖНО!
 // Представьте, что вы попросили бэкенд-разработчика об этом
 
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import classNames from "classnames";
+import classNames from 'classnames';
 
-import { fetchingFilters, fetchedFilters, fetchingErrorFilters, filterCharacters } from "../../actions";
+import { fetchFilters, filterCharacters } from '../../actions';
 import { useHttp } from '../../hooks/http.hook';
 import Spinner from '../spinner/Spinner';
 
@@ -22,24 +22,21 @@ const HeroesFilters = () => {
   const { request } = useHttp();
 
   useEffect(() => {
-    dispatch(fetchingFilters());
-    request('http://localhost:3001/filters')
-      .then((filters) => dispatch(fetchedFilters(filters)))
-      .catch(dispatch(fetchingErrorFilters()))
+    dispatch(fetchFilters(request));
   }, []); //eslint-disable-line
 
 
-  if (filtersLoadingStatus === "loading") {
+  if (filtersLoadingStatus === 'loading') {
       return <Spinner/>;
-  }
+  };
 
-  if (filtersLoadingStatus === "error") {
-      return <h5 className="text-center mt-5">Ошибка загрузки</h5>
-  }
+  if (filtersLoadingStatus === 'error') {
+      return <h5 className='text-center mt-5'>Ошибка загрузки</h5>
+  };
 
   const renderFilters = (arr) => {
     if (arr.length === 0) {
-        return <h5 className="text-center mt-5">Фильтры не найдены</h5>
+        return <h5 className='text-center mt-5'>Фильтры не найдены</h5>
     };
 
     return arr.map(({ name, className, output }) => {
@@ -58,15 +55,15 @@ const HeroesFilters = () => {
 
 
   return (
-    <div className="card shadow-lg mt-4">
-      <div className="card-body">
-        <p className="card-text">Отфильтруйте героев по элементам</p>
-        <div className="btn-group">
+    <div className='card shadow-lg mt-4'>
+      <div className='card-body'>
+        <p className='card-text'>Отфильтруйте героев по элементам</p>
+        <div className='btn-group'>
           { btns }
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 

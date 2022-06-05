@@ -7,34 +7,28 @@
       "element": "water"
     },
     {
-      "id": "7a862530-f3e5-444c-810d-3ca5d47199f7",
-      "name": "asdfasf",
-      "description": "adsf",
-      "element": "wind"
-    },
-    {
-      "id": "8e61d990-2c5e-4c2c-a1ad-5755c8ef70b3",
-      "name": "asdfaf",
-      "description": "asfaf",
-      "element": "earth"
-    },
-    {
-      "id": "7adfb726-6d12-4d7e-a41d-87ed680388c5",
-      "name": "dfaf",
-      "description": "sdfaf",
-      "element": "fire"
-    },
-    {
-      "id": "b6109731-02ce-4dca-bf98-3cd727645af6",
-      "name": "sadf",
-      "description": "sdaf",
-      "element": "fire"
-    },
-    {
       "id": "9126ad4b-b403-4a2b-9673-67b8a263781b",
       "name": "sadf",
       "description": "asdf",
       "element": "wind"
+    },
+    {
+      "id": "8ea31d94-54e5-405c-a210-58f2d0061d3a",
+      "name": "sadf",
+      "description": "asff",
+      "element": "fire"
+    },
+    {
+      "id": "8110c253-54ea-49d9-a9a0-0c91a233792f",
+      "name": "asdf",
+      "description": "adsf",
+      "element": "wind"
+    },
+    {
+      "id": "00385cad-7635-44cf-aefd-4371e7269265",
+      "name": "adfav",
+      "description": "avav",
+      "element": "earth"
     }
   ],
   "filters": [

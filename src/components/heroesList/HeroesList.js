@@ -6,12 +6,12 @@ import { createSelector } from 'reselect';
 
 import './heroesListItem.scss';
 
-import { heroesFetching, heroesFetched, heroesFetchingError, heroDeleted } from '../../actions';
-import HeroesListItem from "../heroesListItem/HeroesListItem";
+import { fetchHeroes, heroDeleted } from '../../actions';
+import HeroesListItem from '../heroesListItem/HeroesListItem';
 import Spinner from '../spinner/Spinner';
 
 // Задача для этого компонента:
-// При клике на "крестик" идет удаление персонажа из общего состояния
+// При клике на 'крестик' идет удаление персонажа из общего состояния
 // Усложненная задача:
 // Удаление идет и с json файла при помощи метода DELETE
 
@@ -31,11 +31,7 @@ const HeroesList = () => {
   const {request} = useHttp();
 
   useEffect(() => {
-    dispatch(heroesFetching());
-    request("http://localhost:3001/heroes")
-      .then(data => dispatch(heroesFetched(data)))
-      .catch(() => dispatch(heroesFetchingError()))
-
+    dispatch(fetchHeroes(request));
     // eslint-disable-next-line
   }, []);
 
@@ -46,12 +42,12 @@ const HeroesList = () => {
   }, [ request ]); //eslint-disable-line
 
 
-  if (heroesLoadingStatus === "loading") {
+  if (heroesLoadingStatus === 'loading') {
     return <Spinner/>;
   }
 
-  if (heroesLoadingStatus === "error") {
-    return <h5 className="text-center mt-5">Ошибка загрузки</h5>
+  if (heroesLoadingStatus === 'error') {
+    return <h5 className='text-center mt-5'>Ошибка загрузки</h5>
   };
 
   const renderHeroesList = (arr) => {
@@ -60,7 +56,7 @@ const HeroesList = () => {
         <CSSTransition
           timeout={ 0 }
           classNames='char'>
-            <h5 className="text-center mt-5">Героев пока нет</h5>
+            <h5 className='text-center mt-5'>Героев пока нет</h5>
         </CSSTransition>
       );
     };
@@ -80,7 +76,7 @@ const HeroesList = () => {
 
   const elements = renderHeroesList(filteredHeroes);
   return (
-    <TransitionGroup component="ul">
+    <TransitionGroup component='ul'>
       {elements}
     </TransitionGroup>
   );
