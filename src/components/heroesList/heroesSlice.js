@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, createSelector } from "@reduxjs/toolkit";
 
 import { useHttp } from '../../hooks/http.hook';
 
@@ -42,6 +42,15 @@ const heroesSlice = createSlice({
       .addDefaultCase(() => {});
   }
 });
+
+export const filteredHeroesSelector = createSelector(
+  (state) => state.heroes.heroes,
+  (state) => state.filters.activeFilter,
+  (heroes, filter) => {
+    if (filter === 'all') return heroes;
+    return heroes.filter((hero) => hero.element === filter);
+  }
+);
 
 const { actions, reducer } = heroesSlice;
 

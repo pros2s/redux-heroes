@@ -7,22 +7,16 @@
       "element": "water"
     },
     {
-      "id": "077202f5-a537-48f3-bb35-b7ccadc1aba8",
-      "name": "asdf",
-      "description": "asdf",
-      "element": "water"
-    },
-    {
-      "id": "ac223998-78c2-4b5e-9c58-05e7c4b82873",
-      "name": "safd",
-      "description": "sdaf",
-      "element": "fire"
-    },
-    {
       "id": "9daafef6-aebb-4257-a533-4910dd50563a",
       "name": "sadf",
       "description": "dsfaf",
       "element": "wind"
+    },
+    {
+      "id": "217acb1d-242b-4ab1-a414-c53e53d2a26d",
+      "name": "adsf",
+      "description": "dsf",
+      "element": "fire"
     }
   ],
   "filters": [
