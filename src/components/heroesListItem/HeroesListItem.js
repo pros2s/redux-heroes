@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './heroesListItem.scss';
+
 
 const HeroesListItem = ({ onDelete, name, description, element }) => {
   let elementClassName;

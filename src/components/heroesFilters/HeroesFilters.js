@@ -48,7 +48,7 @@ const HeroesFilters = () => {
     <div className='card shadow-lg mt-4'>
       <div className='card-body'>
         <p className='card-text'>Отфильтруйте героев по элементам</p>
-        <div className='btn-group'>
+        <div className='btn-group flex-wrap'>
           { btns }
         </div>
       </div>

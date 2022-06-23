@@ -6,11 +6,26 @@
 
 .content {
     display: grid;
-    grid-template-columns: 560px 440px;
+    grid-template-columns: auto auto;
     max-width: 1040px;
     margin: 0 auto;
     padding-top: 50px;
+
+    @media screen and (max-width: 780px){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      max-width: 600px;
+
+      padding: 50px 20px;
+    }
+
     &__interactive {
         padding-left: 40px;
+
+        @media screen and (max-width: 780px){
+          padding-left: 0;
+        }
     }
 }
